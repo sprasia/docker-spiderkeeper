@@ -1,16 +1,9 @@
-# docker-spiderkeeper
-
-Docker image of the beautiful web UI for scrapyd, [SpiderKeeper](https://github.com/DormyMo/SpiderKeeper).
-
-## Usage
-
-Use together with scrapyd. See docker-compose.yml.
-
-```
 version: '2'
 services:
   scrapyd:
     image: sprasia/scrapyd:latest
+    ports:
+      - 6800:6800
     environment:
       TZ: Asia/Tokyo
     volumes:
@@ -31,4 +24,3 @@ services:
 volumes:
   scrapyd:
   spiderkeeper:
-```
